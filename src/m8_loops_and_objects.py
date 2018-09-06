@@ -71,10 +71,11 @@ def draw_circles1():
     turtle.pen = rg.Pen('black', 5)
 
     for k in range(21):
-        turtle.pen = rg.Circle(200, k * 10)
-
+        rg.Circle(rg.Point(200, 200), k * 10)
+        
 
     window.close_on_mouse_click()
+
 def print_sequence2():
     """
     Prints:
