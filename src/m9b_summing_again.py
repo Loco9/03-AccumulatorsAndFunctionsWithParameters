@@ -90,20 +90,20 @@ def run_test_sum_powers_in_range():
     print('--------------------------------------------------')
 
     #Test 1
-    expected =
-    answer = sum_powers_in_range()
+    expected = 7.0816301
+    answer = sum_powers_in_range(3, 5, 0.1)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
     #Test 2
-    expected =
-    answer = sum_powers_in_range()
+    expected = 16.306000
+    answer = sum_powers_in_range(1, 7, 0.5)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
     #Test 3
-    expected =
-    answer = sum_powers_in_range()
+    expected = 1535400
+    answer = sum_powers_in_range(6, 8, 5)
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
@@ -120,13 +120,17 @@ def sum_powers_in_range(m, n, p):
       -- sum_powers_in_range(3, 100, 0.1) returns about 142.384776
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     #   No fair running the code of  sum_powers_in_range  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
 
+    total = 0
+    for k in range(n + 1):
+        total = total + ((m + k) ** p)
+    return total
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
